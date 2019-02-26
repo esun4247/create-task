@@ -1,0 +1,11 @@
+h1.title {
+  text-align: center;
+  font: 2em "Inconsolata", sans-serif;
+}
+
+button.choice {
+  width: 200px;
+  height: 200px;
+  font: 30px "Inconsolata", sans-serif;
+  border-radius: 30px;
+}
