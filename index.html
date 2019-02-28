@@ -10,10 +10,24 @@
     <script type="text/javascript" src="js/create-task.js"></script>
   </head>
   <body>
-    <h1 class="title">Multiplication Practice!</h1>
-    <button class="choice"></button>
-    <button class="choice"></button>
-    <button class="choice"></button>
-    <button class="choice"></button>
+    <div class="tbox">
+      <h1 class="title">Math Practice: Multiplication</h1>
+    </div>
+    <br/>
+    <div class="qb">
+      <button onclick="answer()"  class="linet">Restart</button>
+      <div id="qbox"  class="linet">
+        <h3>Question</h3>
+        <h3>Math</h3>
+      </div>
+      <button onclick="answer()"  class="linet">Start</button>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div class="bbox">
+      <button class="choice" id="ans1"></button>
+      <button class="choice" id="ans2"></button>
+      <button class="choice" id="ans3"></button>
+      <button class="choice" id="ans4"></button>
+    </div>
   </body>
 </html>

@@ -1,11 +1,90 @@
+body{
+  background-color: #999999;
+}
+
 h1.title {
   text-align: center;
   font: 2em "Inconsolata", sans-serif;
 }
 
-button.choice {
-  width: 200px;
-  height: 200px;
+.tbox {
+  margin: auto;
+  border: 3px solid black;
+  width: 100%;
+  background-color: #595959;
+  color: #f0f0f5;
+  border-radius: 20px;
+}
+
+#qbox {
+  border: 3px solid black;
+  width: 30%;
+  background-color: #737373;
+  border-radius: 20px;
+}
+
+.bbox {
+  margin: auto;
+  border: 3px solid black;
+  width: 100%;
+  height: 350px;
+  background-color: #737373;
+  border-radius: 20px;
+}
+
+.linet {
+  display: inline-block;
+  float: left;
+  margin-left: 7%;
+}
+
+.qb {
+  display: block;
+  margin: auto;
+}
+
+button.linet {
+  width: 20%;
+  height: 100px;
   font: 30px "Inconsolata", sans-serif;
   border-radius: 30px;
+  border-width: medium;
+  border-color: #333333;
+  background-color: #00b300;
+}
+
+button.linet:hover {
+  background-color: #a6a6a6;
+  border-color: #0d0d0d;
+}
+
+button.linet:active {
+  color: #e6e6e6;
+  background-color: #00b300;
+  border-color: #a6a6a6;
+}
+
+h3 {
+  text-align: center;
+  font: 25px "Inconsolata", sans-serif;
+}
+
+.choice {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  height: 300px;
+  margin-left: 3.8%;
+  border-width: medium;
+  border-color: #333333;
+  background-color: #00b300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font: 30px "Inconsolata", sans-serif;
+  border-radius: 30px;
+}
+
+.choice:hover {
+  background-color: #a6a6a6;
+  border-color: #0d0d0d;
 }
