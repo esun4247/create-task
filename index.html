@@ -11,16 +11,16 @@
   </head>
   <body>
     <div class="tbox">
-      <h1 class="title">Math Practice</h1>
+      <h1 class="title">Math Practice: Addition, Subtraction, Multiplication, and Division</h1>
     </div>
     <br/>
     <div class="qb">
-      <button onclick="question()"  class="linet">Restart</button>
+      <button onclick="restart()"  class="linet">Restart</button>
       <div id="qbox"  class="linet">
         <h3>Question:</h3>
         <h3 id="quest"></h3>
       </div>
-      <button onclick="question()"  class="linet">Start</button>
+      <button onclick="question()" id="start" class="linet">Start</button>
     </div>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <div class="bbox">
@@ -29,8 +29,8 @@
       <button class="choice" id="ans3" onclick="checkAns(3)"></button>
       <button class="choice" id="ans4" onclick="checkAns(4)"></button>
     </div>
-    <p class="abox">oof</p>
-    <p class="abox" id="correct">-</p>
-    <p class="abox">oof</p>
+    <p class="abox" id="time"><br/>Time:<br/>00:00:00</p>
+    <p class="abox" id="correct"><br/>Answer:<br/>-</p>
+    <p class="abox" id="ansCount"><br/>Score:<br/>0</p>
   </body>
 </html>

@@ -29,7 +29,7 @@ h1.title {
   margin-left: 2%;
   border: 3px solid black;
   width: 30%;
-  height: 130px;
+  height: 150px;
   background-color: #737373;
   border-radius: 20px;
   text-align: center;
@@ -93,7 +93,7 @@ h3 {
   background-color: #00b300;
   margin-top: 20px;
   margin-bottom: 20px;
-  font: 30px "Inconsolata", sans-serif;
+  font: 3em "Inconsolata", sans-serif;
   border-radius: 30px;
 }
 
