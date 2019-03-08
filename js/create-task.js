@@ -6,7 +6,7 @@ var seconds = 0;
 var minutes = 0;
 var hours = 0;
 var score = 0;
-var buttonClicked = 0;
+var buttonClicked = 1;
 
 function checkAns(x){
   if(buttonClicked == 0){
@@ -35,22 +35,27 @@ function restart(){
   document.getElementById("ans4").innerHTML = "";
   document.getElementById("quest").innerHTML = "";
   score = 0;
-  buttonClicked = 0;
+  buttonClicked = 1;
   fques = 0;
 }
 
 function question(){
-  if(fques == 0){
-    startTimer()
-    genquest();
-    genansw();
-    document.getElementById("start").innerHTML = "Next Question";
-    fques = 1;
+  if(nextClicked == 0){
+    if(fques == 0){
+      startTimer()
+      genquest();
+      genansw();
+      document.getElementById("start").innerHTML = "Next Question";
+      buttonClicked = 0;
+      fques = 1;
+    }else{
+      genquest();
+      genansw();
+      buttonClicked = 0;
+      document.getElementById("correct").innerHTML = "<br/>Answer<br/>-"
+    }
   }else{
-    genquest();
-    genansw();
-    buttonClicked = 0;
-    document.getElementById("correct").innerHTML = "<br/>Answer<br/>-"
+
   }
 }
 
