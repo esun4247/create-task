@@ -8,6 +8,8 @@ var hours = 0;
 var score = 0;
 var buttonClicked = 1;
 var nextClicked = 0;
+var correctAns = 0;
+var incorrectAns = 0;
 
 function checkAns(x){
   if(buttonClicked == 0){
@@ -67,6 +69,10 @@ function checkAns(x){
   }
 }
 
+function finish(){
+  
+}
+
 function restart(){
   stopTimer();
   document.getElementById("time").innerHTML = "<br/>Time:<br/>00:00:00";
@@ -86,6 +92,8 @@ function restart(){
   buttonClicked = 1;
   nextClicked = 0;
   fques = 0;
+  var correctAns = 0;
+  var incorrectAns = 0;
 }
 
 function question(){
