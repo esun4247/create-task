@@ -98,12 +98,11 @@ h3 {
 }
 
 .choice:hover {
-  background-color: #33ff33;
-  border-color: #0d0d0d;
+  color: #1a1a1a;
+  border-color: #bfbfbf;
 }
 
 .choice:active {
-  color: #e6e6e6;
-  background-color: #009900;
-  border-color: #a6a6a6;
+  color: #e6e6e6 ;
+  border-color: #ffffff;
 }

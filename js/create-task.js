@@ -122,7 +122,7 @@ function stopTimer(){
 }
 
 function timer(){
-  document.getElementById("time").innerHTML = "<br/>Time:<br/>" + (hours ? (hours>9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes>9 ? minutes : "0" + minutes) : "00") + ":" + (seconds>9 ? seconds : "0" + seconds);;
+  document.getElementById("time").innerHTML = "<br/>Time:<br/>"+(hours ? (hours>9 ? hours : "0" + hours) : "00")+":"+(minutes ? (minutes>9 ? minutes : "0" + minutes) : "00")+":"+(seconds>9 ? seconds : "0" + seconds);
   seconds++;
   if(seconds >= 60){
     seconds = 0;
