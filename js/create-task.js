@@ -7,6 +7,7 @@ var minutes = 0;
 var hours = 0;
 var score = 0;
 var buttonClicked = 1;
+var nextClicked = 0;
 
 function checkAns(x){
   if(buttonClicked == 0){
@@ -14,28 +15,76 @@ function checkAns(x){
       document.getElementById("correct").innerHTML = "<br/>Answer:<br/>Correct!";
       score++;
       document.getElementById("ansCount").innerHTML = "<br/>Score:<br/>" + score;
+      switch(x){
+        case 1:
+          document.getElementById("ans1").style.background = "#33ff33";
+          break;
+        case 2:
+          document.getElementById("ans2").style.background = "#33ff33";
+          break;
+        case 3:
+          document.getElementById("ans3").style.background = "#33ff33";
+          break;
+        case 4:
+          document.getElementById("ans4").style.background = "#33ff33";
+          break;
+      }
     }else{
       document.getElementById("correct").innerHTML = "<br/>Answer:<br/>False!";
       score--;
       document.getElementById("ansCount").innerHTML = "<br/>Score:<br/>" + score;
+      switch(x){
+        case 1:
+          document.getElementById("ans1").style.background = "#ff0000";
+          break;
+        case 2:
+          document.getElementById("ans2").style.background = "#ff0000";
+          break;
+        case 3:
+          document.getElementById("ans3").style.background = "#ff0000";
+          break;
+        case 4:
+          document.getElementById("ans4").style.background = "#ff0000";
+          break;
+      }
+      switch(check){
+        case 1:
+          document.getElementById("ans1").style.background = "#33ff33";
+          break;
+        case 2:
+          document.getElementById("ans2").style.background = "#33ff33";
+          break;
+        case 3:
+          document.getElementById("ans3").style.background = "#33ff33";
+          break;
+        case 4:
+          document.getElementById("ans4").style.background = "#33ff33";
+          break;
+      }
     }
     buttonClicked = 1;
+    nextClicked = 0;
   }
 }
 
 function restart(){
   stopTimer();
   document.getElementById("time").innerHTML = "<br/>Time:<br/>00:00:00";
-  document.getElementById("correct").innerHTML = "<br/>Answer<br/>-";
-  document.getElementById("ansCount").innerHTML = "<br/>Score<br/>0";
+  document.getElementById("correct").innerHTML = "<br/>Answer:<br/>-";
+  document.getElementById("ansCount").innerHTML = "<br/>Score:<br/>0";
   document.getElementById("start").innerHTML = "Start";
   document.getElementById("ans1").innerHTML = "";
   document.getElementById("ans2").innerHTML = "";
   document.getElementById("ans3").innerHTML = "";
   document.getElementById("ans4").innerHTML = "";
   document.getElementById("quest").innerHTML = "";
+  document.getElementById("ans1").style.background = "#00b300";
+  document.getElementById("ans2").style.background = "#00b300";
+  document.getElementById("ans3").style.background = "#00b300";
+  document.getElementById("ans4").style.background = "#00b300";
   score = 0;
   buttonClicked = 1;
+  nextClicked = 0;
   fques = 0;
 }
 
@@ -53,9 +102,12 @@ function question(){
       genansw();
       buttonClicked = 0;
       document.getElementById("correct").innerHTML = "<br/>Answer<br/>-"
+      document.getElementById("ans1").style.background = "#00b300";
+      document.getElementById("ans2").style.background = "#00b300";
+      document.getElementById("ans3").style.background = "#00b300";
+      document.getElementById("ans4").style.background = "#00b300";
     }
-  }else{
-
+    nextClicked = 1;
   }
 }
 
