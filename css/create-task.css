@@ -45,6 +45,27 @@ h1.title {
   border-radius: 20px;
 }
 
+.fbutton {
+  display: block;
+  margin: auto;
+  border: 3px solid black;
+  font: 30px "Inconsolata", sans-serif;
+  width: 40%;
+  background-color: #00b300;
+  border-radius: 20px;
+}
+
+.fbutton:hover {
+  background-color: #33ff33;
+  border-color: #0d0d0d;
+}
+
+.fbutton:active {
+  color: #e6e6e6;
+  background-color: #009900;
+  border-color: #a6a6a6;
+}
+
 .linet {
   display: inline-block;
   float: left;

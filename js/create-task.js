@@ -2,6 +2,8 @@ var fques = 0;
 var ques;
 var check;
 var t;
+var timeCount;
+var sCount = 0;
 var seconds = 0;
 var minutes = 0;
 var hours = 0;
@@ -31,6 +33,7 @@ function checkAns(x){
           document.getElementById("ans4").style.background = "#33ff33";
           break;
       }
+      correctAns++;
     }else{
       document.getElementById("correct").innerHTML = "<br/>Answer:<br/>False!";
       score--;
@@ -63,6 +66,7 @@ function checkAns(x){
           document.getElementById("ans4").style.background = "#33ff33";
           break;
       }
+      incorrectAns++;
     }
     buttonClicked = 1;
     nextClicked = 0;
@@ -70,7 +74,8 @@ function checkAns(x){
 }
 
 function finish(){
-  
+  alert("Results:\nCorrect Answers: " + correctAns + "\nIncorrect Answers: " + incorrectAns + "\nTotal Score: " + score + "\nTime: " + timeCount + "\nScore/Time Ratio: " + (score/sCount).toFixed(2));
+  restart();
 }
 
 function restart(){
@@ -92,8 +97,10 @@ function restart(){
   buttonClicked = 1;
   nextClicked = 0;
   fques = 0;
-  var correctAns = 0;
-  var incorrectAns = 0;
+  correctAns = 0;
+  incorrectAns = 0;
+  timeCount = "00:00:00"
+  sCount = 0;
 }
 
 function question(){
@@ -130,8 +137,10 @@ function stopTimer(){
 }
 
 function timer(){
-  document.getElementById("time").innerHTML = "<br/>Time:<br/>"+(hours ? (hours>9 ? hours : "0" + hours) : "00")+":"+(minutes ? (minutes>9 ? minutes : "0" + minutes) : "00")+":"+(seconds>9 ? seconds : "0" + seconds);
+  timeCount = (hours ? (hours>9 ? hours : "0" + hours) : "00")+":"+(minutes ? (minutes>9 ? minutes : "0" + minutes) : "00")+":"+(seconds>9 ? seconds : "0" + seconds);
+  document.getElementById("time").innerHTML = "<br/>Time:<br/>" + timeCount;
   seconds++;
+  sCount++;
   if(seconds >= 60){
     seconds = 0;
     minutes++;
