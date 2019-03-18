@@ -2,7 +2,7 @@ var fques = 0;
 var ques;
 var check;
 var t;
-var timeCount;
+var timeCount = "00:00:00";
 var sCount = 0;
 var seconds = 0;
 var minutes = 0;
@@ -144,12 +144,10 @@ function timer(){
   if(seconds >= 60){
     seconds = 0;
     minutes++;
-    console.log("oof");
   }
   if(minutes >= 60){
     minutes = 0;
     hours++;
-    console.log("oof");
   }
   t = setTimeout(function(){ timer() }, 1000);
 }
