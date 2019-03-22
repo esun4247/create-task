@@ -156,6 +156,7 @@ function genquest(){
   ques = genopp();
   document.getElementById("quest").innerHTML = ques;
 }
+
 function genansw(){
   let answer = eval(ques);
   let w = eval(genopp());
